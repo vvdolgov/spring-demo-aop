@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class MyDemoLoggingAspect {
+public class MyCloudLogAsyncAspect {
     @Pointcut("execution(* com.aopdemo.dao.*.get*(..))")
     public void getters(){}
 
