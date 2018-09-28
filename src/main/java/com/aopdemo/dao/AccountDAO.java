@@ -2,6 +2,9 @@ package com.aopdemo.dao;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component("accountDAO")
 public class AccountDAO {
     private String name;
@@ -33,5 +36,13 @@ public class AccountDAO {
     public void setServiceCode(String serviceCode) {
         System.out.println(getClass()+ ": int setServiceCode");
         this.serviceCode = serviceCode;
+    }
+
+    public List<Account> findAccounts(){
+        List<Account> accounts = new ArrayList<Account>();
+        accounts.add(new Account("Sam", "1"));
+        accounts.add(new Account("Din", "2"));
+        accounts.add(new Account("Bob", "3")) ;
+        return accounts;
     }
 }
